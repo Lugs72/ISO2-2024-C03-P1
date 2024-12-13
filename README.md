@@ -30,4 +30,10 @@ Realizado por:
 | Alejandro Fernández Muñoz    | alejandro.fdez3@alu.uclm.es   |
 | Lucía García Sánchez	         | lucia.garcia72@alu.uclm.es  |
 
+![image](https://github.com/user-attachments/assets/804f24bf-2a4d-4a47-bdac-5c9696400f6e)
+
+![image](https://github.com/user-attachments/assets/0ede62b8-ea77-48e1-aaa0-e0df2728e780)
+
+
+
 
