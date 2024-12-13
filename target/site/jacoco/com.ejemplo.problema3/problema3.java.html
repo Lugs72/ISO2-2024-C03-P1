@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>problema3.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JunitExample Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.ejemplo.problema3</a> &gt; <span class="el_source">problema3.java</span></div><h1>problema3.java</h1><pre class="source lang-java linenums">package com.ejemplo.problema3;
+
+<span class="fc" id="L3">public class problema3 {</span>
+
+    public String generarRecomendacion(EstadoSalud estadoSalud, CondicionesMeteorologicas condiciones, EspacioOcio espacio) {
+<span class="fc bfc" id="L6" title="All 4 branches covered.">        if (estadoSalud.estaSano() &amp;&amp; estadoSalud.tienePasaporteCovid()) {</span>
+<span class="pc bpc" id="L7" title="5 of 6 branches missed.">            if (condiciones.getTemperatura() &lt; 0 &amp;&amp; condiciones.getHumedad() &lt; 15 &amp;&amp; condiciones.hayPrecipitaciones()) {</span>
+<span class="nc" id="L8">                return &quot;Quedarse en casa&quot;;</span>
+<span class="pc bpc" id="L9" title="5 of 6 branches missed.">            } else if (condiciones.getTemperatura() &lt; 0 &amp;&amp; condiciones.getHumedad() &lt; 15 &amp;&amp; !condiciones.hayPrecipitaciones()) {</span>
+<span class="nc bnc" id="L10" title="All 2 branches missed.">                return espacio.aforoPermitido() ? &quot;Ir a esquiar&quot; : &quot;No se puede realizar ninguna actividad&quot;;</span>
+<span class="pc bpc" id="L11" title="2 of 6 branches missed.">            } else if (condiciones.getTemperatura() &gt;= 0 &amp;&amp; condiciones.getTemperatura() &lt; 15 &amp;&amp; !condiciones.hayPrecipitaciones()) {</span>
+<span class="nc bnc" id="L12" title="All 2 branches missed.">                return espacio.aforoPermitido() ? &quot;Hacer senderismo&quot; : &quot;No se puede realizar ninguna actividad&quot;;</span>
+<span class="pc bpc" id="L13" title="3 of 10 branches missed.">            } else if (condiciones.getTemperatura() &gt;= 15 &amp;&amp; condiciones.getTemperatura() &lt; 25 &amp;&amp; !condiciones.hayPrecipitaciones() &amp;&amp; !condiciones.estaNublado() &amp;&amp; condiciones.getHumedad() &lt;= 60) {</span>
+<span class="pc bpc" id="L14" title="1 of 2 branches missed.">                return espacio.sinRestricciones() ? &quot;Hacer turismo al aire libre&quot; : &quot;No se puede realizar ninguna actividad&quot;;</span>
+<span class="pc bpc" id="L15" title="2 of 6 branches missed.">            } else if (condiciones.getTemperatura() &gt;= 25 &amp;&amp; condiciones.getTemperatura() &lt; 35 &amp;&amp; !condiciones.hayPrecipitaciones()) {</span>
+<span class="pc bpc" id="L16" title="1 of 2 branches missed.">                return espacio.aforoPermitido() ? &quot;Irse de cañas&quot; : &quot;No se puede realizar ninguna actividad&quot;;</span>
+<span class="pc bpc" id="L17" title="3 of 4 branches missed.">            } else if (condiciones.getTemperatura() &gt; 30 &amp;&amp; !condiciones.hayPrecipitaciones()) {</span>
+<span class="nc bnc" id="L18" title="All 2 branches missed.">                return espacio.aforoPermitido() ? &quot;Ir a la playa o piscina&quot; : &quot;No se puede realizar ninguna actividad&quot;;</span>
+            }
+        }
+<span class="fc" id="L21">        return &quot;No se puede realizar ninguna actividad&quot;;</span>
+    }
+
+    public static void main(String[] args) {
+<span class="nc" id="L25">        EstadoSalud estadoSalud = new EstadoSalud(true, true);</span>
+<span class="nc" id="L26">        CondicionesMeteorologicas condiciones = new CondicionesMeteorologicas(20, 50, false, false);</span>
+<span class="nc" id="L27">        EspacioOcio espacio = new EspacioOcio(true, true);</span>
+
+<span class="nc" id="L29">        problema3 recomendacion = new problema3();</span>
+<span class="nc" id="L30">        String resultado = recomendacion.generarRecomendacion(estadoSalud, condiciones, espacio);</span>
+
+<span class="nc" id="L32">        System.out.println(&quot;Recomendación: &quot; + resultado);</span>
+<span class="nc" id="L33">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
