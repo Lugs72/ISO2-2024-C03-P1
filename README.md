@@ -1,4 +1,4 @@
-# ISO2-2024-C03-P1
+# ISO2-2024-C03-Testing-P1
 
 
 ## **Grupo C03-Problema1 - Ingeniería del Software 2**  
