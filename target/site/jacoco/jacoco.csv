@@ -1,5 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-JunitExample Maven Webapp,com.testing.problema3,EspacioOcio,0,15,0,0,0,6,0,3,0,3
-JunitExample Maven Webapp,com.testing.problema3,EstadoSalud,0,15,0,0,0,6,0,3,0,3
-JunitExample Maven Webapp,com.testing.problema3,RecomendadorActividades,34,80,24,28,3,13,18,10,0,2
-JunitExample Maven Webapp,com.testing.problema3,CondicionesMeteorologicas,0,27,0,0,0,10,0,5,0,5
