@@ -20,7 +20,8 @@ Realizado por:
 | Arturo Avilés Morillas       | arturo.aviles@alu.uclm.es    |
 | María Belén Gallego-Casilda Sánchez	         | mbelen.gallego@alu.uclm.es   |
 
-(insertar la imagen aqui)
+![image](https://github.com/user-attachments/assets/615efd16-ae39-43e3-91c0-334a68a07d1b)
+
 
 ## **3. Testing con JUnit**
 Realizado por:
